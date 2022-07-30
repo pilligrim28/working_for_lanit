@@ -1,4 +1,4 @@
-import Login from '../e2e/loginauto/Login'
+import Login from './loginauto/Login'
 
 describe('Log in', function() {
 
