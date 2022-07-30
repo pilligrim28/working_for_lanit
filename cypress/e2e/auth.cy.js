@@ -1,12 +1,19 @@
+import Login from '../e2e/loginauto/Login'
+
 describe('Log in', function() {
-  it('Sign in', function (){
-    cy.visit('https://dev.ltdo.xyz/')
-    cy.get('input[type="email"]').type('pilligrim28')
-    cy.get('input[type="password"]').type('40I65hs#{enter}').wait(10000)
-    //cy.visit('https://dev.ltdo.xyz/departments')
-    //cy.contains('Департаменты').click()
+
+  const login = new Login()
+
+  it('Sign in',  () => {
+    login.visitSite()
+    login.emailLogin()
+    login.password()
     cy.get("a[ng-reflect-router-link='departments']").click()
     cy.contains('+ Создать департамент').click()
-    
+  
   })
+  //it('New', function (){
+
+  
+ // })
 })
