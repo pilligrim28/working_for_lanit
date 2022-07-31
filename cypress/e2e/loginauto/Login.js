@@ -6,7 +6,7 @@ class Login{
         return cy.get('input[type="email"]').type('pilligrim28')
     }
     password(){
-        return cy.get('input[type="password"]').type('40I65hs#{enter}').wait(10000)
+        return cy.get('input[type="password"]').type('40I65hs#{enter}').wait(5000)
     }
 
 }
