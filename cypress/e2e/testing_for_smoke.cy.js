@@ -14,7 +14,7 @@ describe('Log in', function() {
   
   })
   it('New', function (){
-    cy.get('input[type="text"]').type("QA Departments")
+    cy.get('input[type="text"]').type("QA Dep")
     cy.get('#mat-select-value-9').click() //Добавление нового директора
     cy.get('.mat-option-text').contains('Николаев Александр').click()
     cy.get('#mat-input-7').type("Мы самые скромные ребята, нас любят даже утята")
