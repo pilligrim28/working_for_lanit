@@ -8,11 +8,26 @@ it('Sign in',  () => {
   login.visitSite()
   login.emailLogin()
   login.password()
-  cy.get("a[ng-reflect-router-link='departments']").click()
+  cy.get("a[ng-reflect-router-link='users']") //Переход на вкладку "Сотрудники"
+    .click().wait(5000)
 })
 
-/*it('Delete people', () => {
-  cy.get("")
+/*it('click users', () => {
+  cy.get('div[class*="user-list"] button')
+  .eq(0)                        //- вот так задается номер элемента
+  .click()
+  cy.get('div[class="cdk-overlay-pane"] button') //нажатие на кнопку "Добавить в архив"
+  .click()
+  cy.contains('Отменить')
+  .click()
+  
 
 })*/
+it('search users', () => {
+  cy.get('input[type="search"]')
+  .type('Але') .wait(5000)
+ 
+
+})
+ return
 })
